@@ -21,8 +21,12 @@
              placeholder="Employee Last Name" class="form-control mb-4 col-4">
       <input type="text" th:field="*{email}"
              placeholder="Employee Email" class="form-control mb-4 col-4">
-      <button type="submit" class="btn btn-warning col-2">Save Employee</button>
+      <button type="submit" class="btn btn-info col-2">Save Employee</button>
     </form>
+
+    <hr>
+
+    <a th:href="@{/}" class="btn btn-outline-warning">Back to Employee List</a>
   </div>
 </body>
 </html>

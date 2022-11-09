@@ -29,4 +29,16 @@ public class EmployeeServiceImpl implements EmployeeService {
 		this.employeeRepository.save(employee);
 	}
 
+	@Override
+	public Employee getEmployeeById(long id) {
+		Optional<Employee> optional = employeeRepository.findById(id);
+		Employee employee = null;
+		if(optional.isPresent()){
+			employee = optional.get();
+		} else {
+			throw new RuntimeException("Employee not found for an id :: " + id);
+		}
+		return employee;
+	}
+
 }
